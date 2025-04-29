@@ -7,6 +7,10 @@ import { useEffect } from 'react';
 
 const Contact = () => {
     console.log("hello world");
+    const SERVICE_ID = "service_fsljoa4";
+const TEMPLATE_ID = "template_fouwp12";
+const PUBLIC_KEY = "sQQVPXzAd6NRZp_Tx";
+
    
 
 
@@ -25,7 +29,7 @@ const Contact = () => {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID,e.target,import.meta.env.VITE_PUBLIC_KEY).then(()=>{
+        emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then(()=>{
            alert("Message Sent!");
            setFormData({name:"",email:"",message:""})
         }).catch(()=>alert("Oops! Somethingwent wrong.Please try again"))
