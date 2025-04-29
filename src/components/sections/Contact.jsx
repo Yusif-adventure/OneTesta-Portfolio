@@ -1,15 +1,19 @@
 
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser';
 import { useState } from 'react'
 import { useEffect } from 'react';
 
 
 
 const Contact = () => {
+
     console.log("hello world");
     const SERVICE_ID = "service_fsljoa4";
 const TEMPLATE_ID = "template_fouwp12";
 const PUBLIC_KEY = "sQQVPXzAd6NRZp_Tx";
+
+
+
 
    
 
@@ -28,8 +32,10 @@ const PUBLIC_KEY = "sQQVPXzAd6NRZp_Tx";
 
 
     const handleSubmit=(e)=>{
-        e.preventDefault()
-        emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then(()=>{
+        e.preventDefault();
+        emailjs.init(PUBLIC_KEY); // <-- very important
+
+        emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target).then(()=>{
            alert("Message Sent!");
            setFormData({name:"",email:"",message:""})
         }).catch(()=>alert("Oops! Somethingwent wrong.Please try again"))

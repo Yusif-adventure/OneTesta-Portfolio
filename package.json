@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage":"https://Yusif-adventure.github.io/OneTesta-Portfolio",
+  "homepage": "https://Yusif-adventure.github.io/OneTesta-Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.4",
     "emailjs-com": "^3.2.0",
     "react": "^19.0.0",
