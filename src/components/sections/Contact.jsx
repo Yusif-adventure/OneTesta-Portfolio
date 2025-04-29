@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 
 const Contact = () => {
+    console.log("hello world");
    
 
 
