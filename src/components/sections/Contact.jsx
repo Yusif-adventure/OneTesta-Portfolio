@@ -1,8 +1,19 @@
 
 import emailjs from 'emailjs-com'
 import { useState } from 'react'
+import { useEffect } from 'react';
+
+
 
 const Contact = () => {
+    useEffect(() => {
+        console.log(import.meta.env.VITE_SERVICE_ID);
+        console.log(import.meta.env.VITE_TEMPLATE_ID);
+        console.log(import.meta.env.VITE_PUBLIC_KEY);
+      }, []);
+
+
+
     const [formData,setFormData]=useState({
         name:"",
         email:"",
@@ -10,6 +21,7 @@ const Contact = () => {
     })
 
 
+    
 
 
 
