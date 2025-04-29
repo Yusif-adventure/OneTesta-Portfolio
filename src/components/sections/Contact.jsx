@@ -6,11 +6,7 @@ import { useEffect } from 'react';
 
 
 const Contact = () => {
-    useEffect(() => {
-        console.log(import.meta.env.VITE_SERVICE_ID);
-        console.log(import.meta.env.VITE_TEMPLATE_ID);
-        console.log(import.meta.env.VITE_PUBLIC_KEY);
-      }, []);
+   
 
 
 
