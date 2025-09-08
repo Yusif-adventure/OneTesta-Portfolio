@@ -35,7 +35,9 @@ const PUBLIC_KEY = "d0U66sMSqxSpwdy9T";
   e.preventDefault();
 
   emailjs
-    .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+    .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, {
+    publicKey: PUBLIC_KEY,
+  })
     .then(() => {
       alert("Message Sent!");
       setFormData({ name: "", email: "", message: "" });
