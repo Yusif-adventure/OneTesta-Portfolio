@@ -25,6 +25,8 @@ const Contact = () => {
         setLoading(false);
         setStatus({ type: "success", text: "✅ Message sent successfully!" });
         setFormData({ name: "", email: "", message: "" });
+          // 🕒 clear after 5 seconds
+  setTimeout(() => setStatus(null), 5000);
       })
       .catch(() => {
         setLoading(false);
@@ -32,7 +34,10 @@ const Contact = () => {
           type: "error",
           text: "❌ Oops! Something went wrong. Please try again.",
         });
+          // 🕒 clear after 5 seconds
+  setTimeout(() => setStatus(null), 5000);
       });
+
   };
 
   return (
