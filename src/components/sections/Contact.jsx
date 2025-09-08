@@ -31,15 +31,18 @@ const PUBLIC_KEY = "sQQVPXzAd6NRZp_Tx";
 
 
 
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        emailjs.init(PUBLIC_KEY); // <-- very important
+   const handleSubmit = (e) => {
+  e.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target).then(()=>{
-           alert("Message Sent!");
-           setFormData({name:"",email:"",message:""})
-        }).catch(()=>alert("Oops! Somethingwent wrong.Please try again"))
-    }
+  emailjs
+    .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+    .then(() => {
+      alert("Message Sent!");
+      setFormData({ name: "", email: "", message: "" });
+    })
+    .catch(() => alert("Oops! Something went wrong. Please try again"));
+};
+
 
 
 
