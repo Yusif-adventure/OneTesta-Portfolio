@@ -113,6 +113,8 @@ const Contact = () => {
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, { publicKey: PUBLIC_KEY })
       .then(() => {
+        setLoading(false); // stop spinner first
+
         alert("Message Sent!");
         setFormData({ name: "", email: "", message: "" });
       })
