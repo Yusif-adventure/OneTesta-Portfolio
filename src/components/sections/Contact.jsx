@@ -10,7 +10,7 @@ const Contact = () => {
     console.log("hello world");
     const SERVICE_ID = "service_fsljoa4";
 const TEMPLATE_ID = "template_fouwp12";
-const PUBLIC_KEY = "sQQVPXzAd6NRZp_Tx";
+const PUBLIC_KEY = "d0U66sMSqxSpwdy9T";
 
 
 
