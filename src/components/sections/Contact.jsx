@@ -31,19 +31,21 @@ const PUBLIC_KEY = "d0U66sMSqxSpwdy9T";
 
 
 
-   const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
   e.preventDefault();
 
   emailjs
-    .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, {
-    publicKey: PUBLIC_KEY,
-  })
+    .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
     .then(() => {
       alert("Message Sent!");
       setFormData({ name: "", email: "", message: "" });
     })
-    .catch(() => alert("Oops! Something went wrong. Please try again"));
+    .catch((err) => {
+      console.error(err);
+      alert("Oops! Something went wrong. Please try again");
+    });
 };
+
 
 
 
